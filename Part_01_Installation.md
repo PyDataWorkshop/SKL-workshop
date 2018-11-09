@@ -8,4 +8,10 @@
     1. data.gov.ie
     2. finance.yahoo.co.uk
 * Create a github repository to contain your data sets (call it something like "mydata").
-* Upload this CSV file into your github repository.
+* Upload this CSV file into your github repository. (you can upload with the graphical interface).
+
+### Preparing your environment
+
+<pre><code>
+import os
+</code></pre>
