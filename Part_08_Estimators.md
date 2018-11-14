@@ -1,5 +1,8 @@
 
-#### Estimators objects: Fitting data:The core object of scikit-learn is the estimator object. 
+#### Estimators objects: Fitting data:
+
+The core object of scikit-learn is the estimator object. 
+
 All estimator objects expose a``fit`` method, that takes as input a dataset (2D array):
 
 <pre><code>
@@ -8,7 +11,8 @@ estimator.fit(data)
 
 <\code><\pre>
 
- Suppose``LogReg`` and``KNN`` are (shorthand names for) scikit-learn estimators.
+Suppose``LogReg`` and``KNN`` are (shorthand names for) scikit-learn estimators.
+
 <pre><code>
 
 # Supervised Learning Problem
