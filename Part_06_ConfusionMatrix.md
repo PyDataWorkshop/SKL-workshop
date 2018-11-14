@@ -1,5 +1,5 @@
  
- Confusion Matrix in Machine Learning
+## Confusion Matrix in Machine Learning
 
  
 Make the Confusion Matrix Less Confusing.
@@ -38,11 +38,13 @@ Classification accuracy can hide the detail you need to diagnose the performance
 What is a Confusion Matrix?
 A confusion matrix is a summary of prediction results on a classification problem.
 The number of correct and incorrect predictions are summarized with count values and broken down by each class. This is the key to the confusion matrix.
+
 The confusion matrix shows the ways in which your classification model
 is confused when it makes predictions.
 It gives you insight not only into the errors being made by your classifier but more importantly the types of errors that are being made.
 It is this breakdown that overcomes the limitation of using classification accuracy alone.
-How to Calculate a Confusion Matrix
+
+#### How to Calculate a Confusion Matrix
 Below is the process for calculating a confusion Matrix.
 You need a test dataset or a validation dataset with expected outcome values.
 Make a prediction for each row in your test dataset.
