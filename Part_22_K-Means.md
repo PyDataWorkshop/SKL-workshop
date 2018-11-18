@@ -1,16 +1,18 @@
 
-MAY
-17
 #### Clustering using scikit-learn
 The Old Faithful data set is a set of historical observations showing the waiting time before an eruption and the length of the eruption. In the last post we looked into it a little and I'm going to continue looking into it in this post. To refresh (or initialize) everyone's memory of the data set, here is the scatterplot of the data again:
 
-The data appears to be split into two, possibly more, separate populations and in this post we'll examine a simple clustering technique to automatically classify observations as being in one cluster or another. There are many different clustering techniques out there and the simplest of these is K-means clustering. K-means clustering doesn't assume any underlying probability model, but instead just acts on the data. Given a target number, k, of clusters to find, it will locate the centers of each of those k clusters and the boundaries between them. It does this using the following algorithm:
+The data appears to be split into two, possibly more, separate populations and in this post we'll examine a simple clustering technique to automatically classify observations as being in one cluster or another. 
+
+#### Kmeans Clustering
+There are many different clustering techniques out there and the simplest of these is K-means clustering. K-means clustering doesn't assume any underlying probability model, but instead just acts on the data. Given a target number, k, of clusters to find, it will locate the centers of each of those k clusters and the boundaries between them. It does this using the following algorithm:
 
 Start with a randomly selected set of k centroids (the supposed centers of the k clusters)
 Determine which observation is in which cluster, based on which centroid it is closest to (using the squared Euclidean distance: ∑pj=1(xij−xi′j)2 where p is the number of dimensions)
 
 Re-calculate the centroids of each cluster by minimizing the squared Euclidean distance to each observation in the cluster
 Repeat 2. and 3. until the members of the clusters (and hence the positions of the centroids) no longer change.
+
 This is a kind of iterative descent algorithm, where you repeatedly find the minimum until it converges. A potential issue with this kind of algorithm is that it is not guaranteed to find the most optimal cluster arrangement, if you pick the wrong starting points. One method for overcoming this is to run the algorithm a number of times with different randomly selected starting points, and then pick the solution that has the lowest total squared Euclidean distance. This approach is used in the scikit-learn package, defaulting to 10 separate repetitions.
 
 Scikit-learn uses numpy arrays, so make sure you format your data accordingly, and is extremely easy to use. To generate clusters using K-means, you only need do the following (remember all complete code is available in my GitHub repository):
